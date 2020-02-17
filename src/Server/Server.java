@@ -10,7 +10,7 @@ public class Server {
         try {
             server = new ServerSocket(8189);
             System.out.println("Подключение к серверу");
-            while (true) {
+            while (true) { 
                 socket = server.accept();
                 System.out.println("Подключение клиента");
                 new Thread(new ClientHandler(socket)).start();
